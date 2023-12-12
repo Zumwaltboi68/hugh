@@ -10,12 +10,12 @@ OPENAI_API_KEY = ""
 openai.api_key = OPENAI_API_KEY
 
 # Add your ElevenLabs API key
-ELEVENLABS_API_KEY = ""
+ELEVENLABS_API_KEY = "767183ffdfa4ff54ce9de986b39541dc"
 ELEVENLABS_VOICE_STABILITY = 0.30
 ELEVENLABS_VOICE_SIMILARITY = 0.75
 
 # Choose your favorite ElevenLabs voice
-ELEVENLABS_VOICE_NAME = "Hugh"
+ELEVENLABS_VOICE_NAME = "Michael"
 ELEVENLABS_ALL_VOICES = []
 
 app = Flask(__name__)
@@ -30,7 +30,7 @@ def get_voices() -> list:
     """
     url = "https://api.elevenlabs.io/v1/voices"
     headers = {
-        "xi-api-key": ELEVENLABS_API_KEY
+        "xi-api-key": 767183ffdfa4ff54ce9de986b39541dc
     }
     response = requests.get(url, headers=headers)
     return response.json()["voices"]
